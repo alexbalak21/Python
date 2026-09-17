@@ -8,7 +8,7 @@ products = [
 
 def in_stock(products):
     filtered = [p for p in products if p["stock"] > 0]
-    sorted_products = sorted(filtered, key=lambda p : p["price"], reverse=False)
+    sorted_products = sorted(filtered, key=lambda p : p["price"])
     return [(p["name"], p["price"]) for p in sorted_products]
 
 print(in_stock(products))
